@@ -14,3 +14,7 @@
 > Gulp Boilerplate
 
 - [Link para o repositório](https://github.com/junior-escjr/gulp-boilerplate)
+
+> Folder Structure
+
+- [Link para o repositório](https://github.com/junior-escjr/folderStructure)
