@@ -18,3 +18,8 @@
 > Folder Structure
 
 - [Link para o repositório](https://github.com/junior-escjr/folderStructure)
+
+> Referências
+
+- [Link para o site](http://html5blank.com/)
+- [Link para o repositório](https://github.com/html5blank/html5blank)
