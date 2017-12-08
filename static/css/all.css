@@ -263,7 +263,7 @@ body {
   position: relative; }
 
 main {
-  padding-bottom: 57px; }
+  padding: 20px 0 57px; }
 
 .section {
   padding: 20px 0; }
@@ -292,15 +292,6 @@ p {
     padding-right: 7.5px;
     float: left;
     width: 33.33333%; } }
-
-@media (min-width: 0) {
-  .col-content-author {
-    position: relative;
-    min-height: 1px;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-    float: left;
-    width: 100%; } }
 
 .header {
   background-color: #000f1e;

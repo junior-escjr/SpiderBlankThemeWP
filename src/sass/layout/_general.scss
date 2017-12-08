@@ -10,7 +10,7 @@ body {
 	position: relative;
 }
 
-main { padding-bottom: 57px; }
+main { padding: 20px 0 57px; }
 
 .section {
 	padding: 20px 0;
@@ -30,8 +30,4 @@ p {
 
 .col-side {
 	@include make-grid-column(4);
-}
-
-.col-content-author {
-	@include make-grid-column(12);
 }

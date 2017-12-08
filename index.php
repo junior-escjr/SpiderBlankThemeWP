@@ -1,34 +1,22 @@
 <?php get_header(); ?>
 
-	<main class="content" role="main">
+	<main class="main" role="main">
 
-		<!-- section -->
-		<section id="slideshow">
-			<div class="slide-home">
-				<div class="item">Slideshow</div>
-				<!-- <div class="item">Slideshow</div> -->
-			</div>
-		</section>
-		<!-- /section -->
+		<div id="conteudo" class="container">
 
-		<!-- section -->
-		<section id="conteudo" class="container">
-
-			<!-- row -->
 			<div class="row">
-				<div class="col-lg-8">
+				<div class="col-content">
 					<div class="conteudo-info">
 						corpo
 					</div>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-side">
 					<?php get_sidebar(); ?>
 				</div>
 			</div>
-			<!-- /row -->
 
-		</section>
-		<!-- /section -->
+		</div>
+
 	</main>
 
 <?php get_footer(); ?>
