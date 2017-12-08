@@ -16,3 +16,6 @@ include(TEMPLATEPATH . '/functions/insert-scripts-style.php');
 
 // REGISTER MENU
 include(TEMPLATEPATH . '/functions/register-nav-menu.php');
+
+// TEMPLATE COMENTÁRIO
+include(TEMPLATEPATH . '/functions/insert-mytheme-comment.php');

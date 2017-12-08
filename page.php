@@ -1,14 +1,13 @@
 <?php get_header(); ?>
 
-	<main class="content" role="main">
-		<!-- section -->
-		<section class="container">
+	<main class="main" role="main">
 
-			<!-- row -->
+		<div class="container">
+
 			<div class="row">
 
 				<!-- col-lg-8 -->
-				<div class="col-lg-8">
+				<div class="col-content">
 					<h1><?php the_title(); ?></h1>
 
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -44,16 +43,14 @@
 				<!-- /col-lg-8 -->
 
 				<!-- col-lg-4 -->
-				<div class="col-lg-4">
+				<div class="col-side">
 					<?php get_sidebar(); ?>
 				</div>
 				<!-- /col-lg-4 -->
 
 			</div>
-			<!-- /row -->
 
-		</section>
-		<!-- /section -->
+		</div>
 	</main>
 
 <?php get_footer(); ?>
