@@ -2,8 +2,8 @@
 /*--------------------------------------------------------------
 	CARREGANDO ESTILOS E SCRIPTS
 --------------------------------------------------------------*/
-add_action('wp_enqueue_scripts', 'btwp_enqueue_scripts');
-function btwp_enqueue_scripts() {
+add_action('wp_enqueue_scripts', 'spider_enqueue_scripts');
+function spider_enqueue_scripts() {
 
 	// CARREGA FONTE DO GOOGLE
 	wp_register_style('btwp-googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
@@ -15,8 +15,8 @@ function btwp_enqueue_scripts() {
 }
 
 
-add_action('wp_footer', 'load_scripts');
-function load_scripts() {
+add_action('wp_footer', 'spider_load_scripts');
+function spider_load_scripts() {
 
 	// CARREGA JQUERY NATIVO
 	wp_enqueue_script('jquery', true);

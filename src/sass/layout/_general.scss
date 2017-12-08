@@ -31,3 +31,7 @@ p {
 .col-side {
 	@include make-grid-column(4);
 }
+
+.col-content-author {
+	@include make-grid-column(12);
+}
