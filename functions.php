@@ -8,6 +8,8 @@
 	Theme Support
 \*------------------------------------*/
 
+load_theme_textdomain( 'spiderblank', get_template_directory() . '/languages' );
+
 // INSERIR SCRIPTS
 include(TEMPLATEPATH . '/functions/insert-scripts-style.php');
 

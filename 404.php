@@ -10,14 +10,15 @@
 			<div class="row">
 
 				<!-- col-lg-8 -->
-				<div class="col-lg-8">
+				<div class="col-content">
 					<!-- article -->
 					<article id="post-404">
 
-						<h1>Página não encontrada</h1>
-						<h2>
-							<a href="<?php echo home_url(); ?>">Retorma para home</a>
-						</h2>
+						<h1>Error 404</h1>
+						<h2><?php _e('Page not found', 'spiderblank'); ?></h2>
+						<h3>
+							<a href="<?php echo home_url(); ?>"><?php _e('Return to home', 'spiderblank'); ?></a>
+						</h3>
 
 					</article>
 					<!-- /article -->
@@ -25,7 +26,7 @@
 				<!-- /col-lg-8 -->
 
 				<!-- col-lg-4 -->
-				<div class="col-lg-4">
+				<div class="col-side">
 					<?php get_sidebar(); ?>
 				</div>
 				<!-- /col-lg-4 -->
