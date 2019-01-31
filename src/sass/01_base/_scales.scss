@@ -1,0 +1,82 @@
+// ------------------------------------------------------------
+// BERAKPOINTS
+// ------------------------------------------------------------
+
+$grid-breakpoints: (
+    bp576: 576px,
+    bp600: 600px,
+    bp1200: 1200px,
+);
+
+// ------------------------------------------------------------
+// COLORS
+// ------------------------------------------------------------
+
+$colors: (
+    primary : $primary,
+    secondary : $secondary,
+    snow : $snow,
+    dark : $dark,
+    sun : $sun,
+    grass : $grass,
+    blood : $blood,
+    grey-lighter : $grey-lighter,
+    grey-light : $grey-light,
+    grey : $grey,
+    grey-dark : $grey-dark,
+    grey-darker : $grey-darker
+);
+
+// ------------------------------------------------------------
+// FONTS
+// ------------------------------------------------------------
+
+$font-size : (
+    small-x : $small-x,
+    small : $small,
+    regular : $regular,
+    large: $large,
+    large-x : $large-x,
+    large-xx : $large-xx,
+);
+
+$font-family : (
+    primary    : $font-primary,
+    secondary   : $font-secondary
+);
+
+$font-weight : (
+    light:      300,
+    regular:    400,
+    medium:     500,
+    semibold:   600,
+    bold:       700,
+    xbold:      800,
+    black:      900
+);
+
+// ------------------------------------------------------------
+// SPACING
+// ------------------------------------------------------------
+
+$margin: (
+    0: 0,
+    1: 1px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    30: 30px,
+    64: 64px,
+);
+
+$padding: (
+    0: 0,
+    1: 1px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    30: 30px,
+    64: 64px,
+);

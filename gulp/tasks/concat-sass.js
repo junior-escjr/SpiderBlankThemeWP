@@ -4,9 +4,11 @@ var gulp = require('gulp');
 var concat = require('gulp-concat'); // junta todos os arquivos
 var sass = require('gulp-sass');
 
-gulp.task('concat-sass', function () {
+gulp.task('concat-sass', function (done) {
   gulp.src('../src/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('all.css'))
     .pipe(gulp.dest('../static/css/'))
+
+    done();
 });

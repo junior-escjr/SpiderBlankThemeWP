@@ -2,7 +2,9 @@
 
 var gulp = require('gulp');
 
-gulp.task('default', function(){
-	gulp.watch('../src/sass/**/*.scss', ['concat-sass']) // MONITORA A PASTA SASS DO CSS
-	gulp.watch('../src/js/**/*.js', ['concat-js']) // MONITORA A PASTA SASS DO CSS
-});
+gulp.task('default', gulp.series('concat-sass', 'concat-js', function(done) {
+	gulp.watch('../src/sass/**/*.scss', gulp.parallel('concat-sass', 'min-css'))
+	gulp.watch('../src/js/**/*.js', gulp.parallel('concat-js', 'min-js'))
+
+	done();
+}));

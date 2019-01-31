@@ -1,0 +1,162 @@
+.cf {
+    *zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
+}
+
+/* aspect ratio do youtube 16:9 */
+.ratiohd {
+	position: relative;
+	padding-bottom: 56.25%; /* (9 / 16) * 100 */
+	float: left;
+	width: 100%;
+	height: 0;
+}
+
+.ratio_el {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+/* ==================== MENU DROPDOWN ===================== */
+
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul {
+  list-style: none;
+}
+
+ul.dropdown {
+  position: relative;
+  z-index: 597;
+}
+
+ul.dropdown li {
+  float: left;
+  min-height: 1px;
+  vertical-align: middle;
+}
+
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+
+/* DIREÇÃO DO SUBMENU*/
+
+ul.dropdown-right ul {
+  right: 0 ;
+}
+
+ul.dropdown-left ul {
+  left: 0 ;
+}
+
+/* SUBMENU */
+ul.dropdown ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  z-index: 598;
+  font-size: 12px;
+}
+
+ul.dropdown ul li {
+  float: none;
+}
+
+ul.dropdown ul ul {
+  top: 1px;
+  left: 99%;
+}
+
+ul.dropdown li:hover > ul {
+  visibility: visible;
+  width: 211px;
+}
+
+.pos-r { position: relative; }
+.pos-a{ position: absolute; }
+
+/* --------------------------------------------------------------- */
+/* FONT-WEIGHT */
+/* --------------------------------------------------------------- */
+
+@each $key, $value in $font-weight {
+    .fw-#{$key}{
+        font-weight: $value;
+    }
+}
+
+
+/* --------------------------------------------------------------- */
+/* PADDING */
+/* --------------------------------------------------------------- */
+
+@function dd( $name ){
+    @return $name+$breakpoint-separator;
+}
+
+@mixin ddScale( $className, $breakPointKey, $scaleKey){
+    .#{dd( $breakPointKey )}#{$className}-#{$scaleKey}{
+        @content;
+    }
+}
+
+
+@each $scaleKey, $scaleValue in $padding {
+    .pd-#{$scaleKey}{ padding: $scaleValue; }
+    .pd-t-#{$scaleKey}{ padding-top: $scaleValue; }
+    .pd-l-#{$scaleKey}{ padding-left: $scaleValue; }
+    .pd-b-#{$scaleKey}{ padding-bottom: $scaleValue; }
+    .pd-r-#{$scaleKey}{ padding-right: $scaleValue; }
+}
+
+@each $bkKey, $bkValue in $grid-breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $padding {
+                @include ddScale( 'pd', $bkKey, $scaleKey){ padding: $scaleValue; }
+                @include ddScale( 'pd-t', $bkKey, $scaleKey){ padding-top: $scaleValue; }
+                @include ddScale( 'pd-l', $bkKey, $scaleKey){ padding-left: $scaleValue; }
+                @include ddScale( 'pd-b', $bkKey, $scaleKey){ padding-bottom: $scaleValue; }
+                @include ddScale( 'pd-r', $bkKey, $scaleKey){ padding-right: $scaleValue; }
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------------------- */
+/* MARGIN */
+/* --------------------------------------------------------------- */
+
+
+@each $scaleKey, $scaleValue in $margin {
+    .mg-#{$scaleKey}{ margin: $scaleValue; }
+    .mg-t-#{$scaleKey}{ margin-top: $scaleValue; }
+    .mg-l-#{$scaleKey}{ margin-left: $scaleValue; }
+    .mg-b-#{$scaleKey}{ margin-bottom: $scaleValue; }
+    .mg-r-#{$scaleKey}{ margin-right: $scaleValue; }
+}
+
+
+
+@each $bkKey, $bkValue in $grid-breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $margin {
+                @include ddScale( 'mg', $bkKey, $scaleKey){ margin: $scaleValue; }
+                @include ddScale( 'mg-t', $bkKey, $scaleKey){ margin-top: $scaleValue; }
+                @include ddScale( 'mg-l', $bkKey, $scaleKey){ margin-left: $scaleValue; }
+                @include ddScale( 'mg-b', $bkKey, $scaleKey){ margin-bottom: $scaleValue; }
+                @include ddScale( 'mg-r', $bkKey, $scaleKey){ margin-right: $scaleValue; }
+            }
+        }
+    }
+}
