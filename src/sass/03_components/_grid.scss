@@ -23,32 +23,32 @@ $break-point-default:       0;
     @extend .cf;
 }
 
-@mixin make-grid-column-offset($grid-columns, $breakpoint: $break-point-default) {
+@mixin make-grid-column-offset($columns: $grid-columns, $breakpoint: $break-point-default) {
     @media (min-width: $breakpoint) {
-        margin-left: percentage(($grid-columns / $grid-columns));
+        margin-left: percentage(($columns / $grid-columns));
     }
 }
 
-@mixin make-grid-column-push($grid-columns, $breakpoint: $break-point-default) {
+@mixin make-grid-column-push($columns: $grid-columns, $breakpoint: $break-point-default) {
     @media (min-width: $breakpoint) {
-        left: percentage(($grid-columns / $grid-columns));
+        left: percentage(($columns / $grid-columns));
     }
 }
 
-@mixin make-grid-column-pull($grid-columns, $breakpoint: $break-point-default) {
+@mixin make-grid-column-pull($columns: $grid-columns, $breakpoint: $break-point-default) {
     @media (min-width: $breakpoint) {
-        right: percentage(($grid-columns / $grid-columns));
+        right: percentage(($columns / $grid-columns));
     }
 }
 
-@mixin make-grid-column($grid-columns, $breakpoint: $break-point-default, $gutter: $grid-gutter-width) {
+@mixin make-grid-column($columns: $grid-columns, $breakpoint: $break-point-default, $gutter: $grid-gutter-width) {
     @media (min-width: $breakpoint) {
         position: relative;
         min-height: 1px;
         padding-left:  ($gutter / 2);
         padding-right: ($gutter / 2);
         float: left;
-        width: percentage(($grid-columns / $grid-columns));
+        width: percentage(($columns / $grid-columns));
     }
 }
 

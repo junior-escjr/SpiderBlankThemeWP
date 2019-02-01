@@ -83,80 +83,10 @@ ul.dropdown li:hover > ul {
 .pos-r { position: relative; }
 .pos-a{ position: absolute; }
 
-/* --------------------------------------------------------------- */
-/* FONT-WEIGHT */
-/* --------------------------------------------------------------- */
-
-@each $key, $value in $font-weight {
-    .fw-#{$key}{
-        font-weight: $value;
-    }
-}
-
-
-/* --------------------------------------------------------------- */
-/* PADDING */
-/* --------------------------------------------------------------- */
-
-@function dd( $name ){
-    @return $name+$breakpoint-separator;
-}
-
-@mixin ddScale( $className, $breakPointKey, $scaleKey){
-    .#{dd( $breakPointKey )}#{$className}-#{$scaleKey}{
-        @content;
-    }
-}
-
-
-@each $scaleKey, $scaleValue in $padding {
-    .pd-#{$scaleKey}{ padding: $scaleValue; }
-    .pd-t-#{$scaleKey}{ padding-top: $scaleValue; }
-    .pd-l-#{$scaleKey}{ padding-left: $scaleValue; }
-    .pd-b-#{$scaleKey}{ padding-bottom: $scaleValue; }
-    .pd-r-#{$scaleKey}{ padding-right: $scaleValue; }
-}
-
-@each $bkKey, $bkValue in $grid-breakpoints {
-    @if($bkValue != 0){
-        @media (min-width: $bkValue) {
-            @each $scaleKey, $scaleValue in $padding {
-                @include ddScale( 'pd', $bkKey, $scaleKey){ padding: $scaleValue; }
-                @include ddScale( 'pd-t', $bkKey, $scaleKey){ padding-top: $scaleValue; }
-                @include ddScale( 'pd-l', $bkKey, $scaleKey){ padding-left: $scaleValue; }
-                @include ddScale( 'pd-b', $bkKey, $scaleKey){ padding-bottom: $scaleValue; }
-                @include ddScale( 'pd-r', $bkKey, $scaleKey){ padding-right: $scaleValue; }
-            }
-        }
-    }
-}
-
-
-/* --------------------------------------------------------------- */
-/* MARGIN */
-/* --------------------------------------------------------------- */
-
-
-@each $scaleKey, $scaleValue in $margin {
-    .mg-#{$scaleKey}{ margin: $scaleValue; }
-    .mg-t-#{$scaleKey}{ margin-top: $scaleValue; }
-    .mg-l-#{$scaleKey}{ margin-left: $scaleValue; }
-    .mg-b-#{$scaleKey}{ margin-bottom: $scaleValue; }
-    .mg-r-#{$scaleKey}{ margin-right: $scaleValue; }
-}
-
-
-
-@each $bkKey, $bkValue in $grid-breakpoints {
-    @if($bkValue != 0){
-        @media (min-width: $bkValue) {
-            @each $scaleKey, $scaleValue in $margin {
-                @include ddScale( 'mg', $bkKey, $scaleKey){ margin: $scaleValue; }
-                @include ddScale( 'mg-t', $bkKey, $scaleKey){ margin-top: $scaleValue; }
-                @include ddScale( 'mg-l', $bkKey, $scaleKey){ margin-left: $scaleValue; }
-                @include ddScale( 'mg-b', $bkKey, $scaleKey){ margin-bottom: $scaleValue; }
-                @include ddScale( 'mg-r', $bkKey, $scaleKey){ margin-right: $scaleValue; }
-            }
-        }
-    }
-}
+@import "05_utilities/font-family";
+@import "05_utilities/font-size";
+@import "05_utilities/font-weight";
+@import "05_utilities/font-colors";
+@import "05_utilities/padding";
+@import "05_utilities/margin";
+@import "05_utilities/backgrounds";

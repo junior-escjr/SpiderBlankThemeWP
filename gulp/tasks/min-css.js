@@ -4,11 +4,13 @@ var gulp = require('gulp');
 var rename = require('gulp-rename'); // renomeia os arquivos
 var minifyCss = require('gulp-cssmin'); // minifica os arquivos
 
-gulp.task('min-css', function(){
+gulp.task('min-css', function(done){
 	gulp.src('../static/css/all.css')
 	.pipe(minifyCss())
 	.pipe(rename({
 		suffix: '.min'
 	}))
     .pipe(gulp.dest('../static/css/'));
+
+    done();
 });

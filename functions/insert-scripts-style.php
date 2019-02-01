@@ -6,12 +6,12 @@ add_action('wp_enqueue_scripts', 'spider_enqueue_scripts');
 function spider_enqueue_scripts() {
 
 	// CARREGA FONTE DO GOOGLE
-	wp_register_style('btwp-googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
-	wp_enqueue_style( 'btwp-googleFonts');
+	// wp_register_style('btwp-googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
+	// wp_enqueue_style( 'btwp-googleFonts');
 
 	// CSSs
 	// wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css');
-	wp_enqueue_style('all', get_stylesheet_directory_uri() . '/static/css/all.css');
+	wp_enqueue_style('all', get_stylesheet_directory_uri() . '/static/css/all.min.css');
 }
 
 

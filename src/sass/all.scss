@@ -6,15 +6,16 @@
 @import "01_base/reset";
 
 // ELEMENTS
+@import "02_elements/buttons";
 
 // COMPONENTS
 @import "03_components/grid";
 
 // LAYOUT
+@import "04_layout/general";
+@import "04_layout/header";
+@import "04_layout/frontpage";
+@import "04_layout/footer";
 
 // HELPERS
-@import "05_helpers/utilities";
-@import "05_helpers/font-family";
-@import "05_helpers/font-size";
-@import "05_helpers/font-colors";
-@import "05_helpers/backgrounds";
+@import "05_utilities/utilities";
