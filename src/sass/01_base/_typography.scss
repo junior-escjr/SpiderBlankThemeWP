@@ -1,0 +1,47 @@
+body {
+    font-family: $font-primary;
+    font-size: $font-size-primary;
+    line-height: $line-height-primary;
+    color: $text-color;
+    background-color: $body-bg;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    background-color: transparent;
+
+    &:hover, &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+
+    &:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    &:active, &:hover { outline: 0; }
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+.mark, mark { padding: .2em; background-color: #fcf8e3; }
+.small, small { font-size: 80%; font-weight: 400; }
+b, strong { font-weight: bolder; }
+blockquote { margin: 0 0 1rem; }
+
+/* =============== Lead =============== */
+
+p {
+    font-size: $small;
+    margin-bottom: 15px;
+    line-height: lh(normal);
+}

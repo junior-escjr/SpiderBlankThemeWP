@@ -24,13 +24,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body {
-  font-family: "Montserrat";
-  font-size: 18px;
-  line-height: 18px;
-  color: #848484;
-  background-color: #fff; }
-
 img {
   display: block;
   max-width: 100%;
@@ -38,9 +31,6 @@ img {
 
 object, embed, video, iframe, iframe[style] {
   max-width: 100%; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
 
 ul {
   list-style-type: none; }
@@ -64,7 +54,29 @@ audio:not([controls]) {
 [hidden], template {
   display: none; }
 
-/* ==================== LINKS ===================== */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/* ==================== FORMULÁRIO ===================== */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+body {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 18px;
+  color: #848484;
+  background-color: #fff; }
+
 a {
   color: #848484;
   text-decoration: none;
@@ -78,48 +90,46 @@ a {
   a:active, a:hover {
     outline: 0; }
 
-/* ==================== TIPOGRAFIA ===================== */
-b,
-strong {
-  font-weight: bold; }
+h1 {
+  font-size: 46px; }
 
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
+h2 {
+  font-size: 38px; }
 
-/* ==================== FORMATAÇÃO ALINHAMENTO ===================== */
-.alignleft, img.alignleft, .alignright, img.alignright {
-  display: inline; }
+h3 {
+  font-size: 31px; }
 
-.aligncenter, img.aligncenter, .alignnone, img.alignnone {
-  display: block;
-  clear: both; }
+h4 {
+  font-size: 23px; }
 
-.alignleft, img.alignleft {
-  float: left;
-  margin: 15px 15px 26px 0; }
+h5 {
+  font-size: 18px; }
 
-.alignright, img.alignright {
-  float: right;
-  margin: 15px 0 15px 15px; }
+h6 {
+  font-size: 16px; }
 
-.aligncenter, img.aligncenter {
-  margin: 15px auto 10px auto; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
 
-.alignnone, img.alignnone {
-  margin: 20px auto; }
+.mark, mark {
+  padding: .2em;
+  background-color: #fcf8e3; }
 
-/* ==================== FORMULÁRIO ===================== */
-input, button, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit; }
+.small, small {
+  font-size: 80%;
+  font-weight: 400; }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+b, strong {
+  font-weight: bolder; }
+
+blockquote {
+  margin: 0 0 1rem; }
+
+/* =============== Lead =============== */
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: lh(normal); }
 
 /* height 30px */
 .btn {
@@ -434,6 +444,28 @@ ul.dropdown li:hover > ul {
 
 .pos-a {
   position: absolute; }
+
+/* ==================== FORMATAÇÃO ALINHAMENTO ===================== */
+.alignleft, img.alignleft, .alignright, img.alignright {
+  display: inline; }
+
+.aligncenter, img.aligncenter, .alignnone, img.alignnone {
+  display: block;
+  clear: both; }
+
+.alignleft, img.alignleft {
+  float: left;
+  margin: 15px 15px 26px 0; }
+
+.alignright, img.alignright {
+  float: right;
+  margin: 15px 0 15px 15px; }
+
+.aligncenter, img.aligncenter {
+  margin: 15px auto 10px auto; }
+
+.alignnone, img.alignnone {
+  margin: 20px auto; }
 
 /* --------------------------------------------------------------- */
 /* FONT-FAMILY */

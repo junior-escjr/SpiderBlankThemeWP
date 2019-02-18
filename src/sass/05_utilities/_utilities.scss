@@ -83,6 +83,16 @@ ul.dropdown li:hover > ul {
 .pos-r { position: relative; }
 .pos-a{ position: absolute; }
 
+/* ==================== FORMATAÇÃO ALINHAMENTO ===================== */
+
+.alignleft, img.alignleft, .alignright, img.alignright { display: inline; }
+.aligncenter, img.aligncenter, .alignnone, img.alignnone { display: block; clear: both; }
+
+.alignleft, img.alignleft { float: left; margin: 15px 15px 26px 0; }
+.alignright, img.alignright { float: right; margin: 15px 0 15px 15px; }
+.aligncenter, img.aligncenter { margin: 15px auto 10px auto; }
+.alignnone, img.alignnone { margin: 20px auto; }
+
 @import "05_utilities/font-family";
 @import "05_utilities/font-size";
 @import "05_utilities/font-weight";
