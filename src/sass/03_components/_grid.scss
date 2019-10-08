@@ -18,9 +18,12 @@ $break-point-default:       0;
 
 // Creates a wrapper for a series of columns
 @mixin make-row($gutter: $grid-gutter-width) {
+    *zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
+
     margin-left:  ceil(($gutter / -2));
     margin-right: floor(($gutter / -2));
-    @extend .cf;
 }
 
 @mixin make-grid-column-offset($columns: $grid-columns, $breakpoint: $break-point-default) {
@@ -72,7 +75,4 @@ $break-point-default:       0;
 
 .row {
     @include make-row;
-    *zoom: 1;
-    &:before, &:after { content: ""; display: table; }
-    &:after { clear: both; }
 }
