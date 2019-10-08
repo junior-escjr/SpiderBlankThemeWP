@@ -1,2 +1,7 @@
 .DS_Store
 node_modules/
+all.css
+all.min.css
+all.js
+all.min.js
+package-lock.json
