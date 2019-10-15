@@ -1,9 +1,3 @@
-// espaçamento da colunas
-$grid-columns:              12 !default;
-$grid-gutter-width:         16px !default;
-$break-point-default:       0;
-
-
 // Grid system
 //
 // Generate semantic grid columns with these mixins.
@@ -53,26 +47,4 @@ $break-point-default:       0;
         float: left;
         width: percentage(($columns / $grid-columns));
     }
-}
-
-.container {
-    max-width: 1280px;
-    @include container-fixed;
-}
-
-
-// Fluid container
-//
-// Utilizes the mixin meant for fixed width containers, but without any defined
-// width for fluid, full width layouts.
-
-.container-fluid { @include container-fixed; }
-
-
-// Row
-//
-// Rows contain and clear the floats of your columns.
-
-.row {
-    @include make-row;
 }
