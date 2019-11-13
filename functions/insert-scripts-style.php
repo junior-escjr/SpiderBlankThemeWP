@@ -23,4 +23,7 @@ function spider_load_scripts() {
 	
 	// CARREGA SCRIPTS
 	// wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/static/js/scripts.js');
+	// wp_localize_script( 'scripts', 'ajax', array(
+	// 	'ajax_url' => admin_url( 'admin-ajax.php' )
+	// ));
 }
