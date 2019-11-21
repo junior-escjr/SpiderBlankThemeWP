@@ -4,21 +4,17 @@
 	@include x-rem(padding, 5px 0);
 }
 
-.header-logo {
-	@include make-grid-column(2);
-}
+.header-logo { display: block; width: 180px; }
 
-.menu-principal {
-	text-align: right;
-	@include make-grid-column(6);
-	@include make-grid-column-offset(4);
+@media ( min-width: 1200px ) {
+	.menu {
+		float: right;
 
-	.page_item {
-		display: inline-block;
-
-		a {
-			display: block;
-			line-height: 43px;
+		.menu-item {
+			a {
+				display: block;
+				padding: 10px;
+			}
 		}
 	}
 }

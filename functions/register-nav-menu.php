@@ -7,8 +7,8 @@ function spidertheme_nav(){
     array(
         'theme_location'  => 'menu-principal',
         'container'       => 'nav',
-        'container_class' => '',
-        'menu_class'      => 'cf dropdown menu-principal'
+        'container_class' => 'menu-responsive -pos-right',
+        'menu_class'      => 'cf dropdown menu scroll-menu',
         //'walker'          => $walker
         )
     );

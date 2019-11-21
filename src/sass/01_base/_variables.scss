@@ -12,14 +12,14 @@ $large-x: 	36px;
 $large-xx: 	48px;
 
 $font-size-primary:		$regular;
-$line-height-primary:	$regular;
+$line-height-primary:	1.2;
 
-$font-size-h1:	floor(($font-size-primary * 2.6)) !default;
-$font-size-h2:	floor(($font-size-primary * 2.15)) !default;
-$font-size-h3:	ceil(($font-size-primary * 1.7)) !default;
-$font-size-h4:	ceil(($font-size-primary * 1.25)) !default;
-$font-size-h5:	$font-size-primary !default;
-$font-size-h6:	ceil(($font-size-primary * 0.85)) !default;
+$font-size-h1:	$large-xx !default;
+$font-size-h2:	$large-x !default;
+$font-size-h3:	$large !default;
+$font-size-h4:	$regular !default;
+$font-size-h5:	$small !default;
+$font-size-h6:	$small-x !default;
 
 //== Colors
 $primary: 		#848484;

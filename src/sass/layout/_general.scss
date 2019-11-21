@@ -1,0 +1,33 @@
+html, body { height: 100%; }
+
+body {
+	background: url('../images/bg2.png') no-repeat right top #fff;
+	background-size: auto 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+main { padding: 20px 0 57px; }
+
+.section {
+	padding: 20px 0;
+
+	&.-bg-grey { background-color: #eee; }
+}
+
+p {
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom: 24px;
+}
+
+.col-content {
+	@include make-grid-column(8);
+}
+
+.col-side {
+	@include make-grid-column(4);
+}
