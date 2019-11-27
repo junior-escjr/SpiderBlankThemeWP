@@ -767,8 +767,6 @@ a.btn {
     -o-transition: all 3s ease;
     transition: all 3s ease; }
   .menu-responsive {
-    max-width: 300px;
-    width: 80%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -779,6 +777,8 @@ a.btn {
     -o-transition: 0.3s 0.3s linear;
     transition: 0.3s 0.3s linear; }
     .menu-responsive.-pos-left {
+      max-width: 300px;
+      width: 80%;
       left: 0;
       -moz-transform: translate3d(-100%, 0, 0);
       -webkit-transform: translate3d(-100%, 0, 0);
@@ -786,12 +786,19 @@ a.btn {
       -ms-transform: translate3d(-100%, 0, 0);
       transform: translate3d(-100%, 0, 0); }
     .menu-responsive.-pos-right {
+      max-width: 300px;
+      width: 80%;
       right: 0;
       -moz-transform: translate3d(100%, 0, 0);
       -webkit-transform: translate3d(100%, 0, 0);
       -o-transform: translate3d(100%, 0, 0);
       -ms-transform: translate3d(100%, 0, 0);
       transform: translate3d(100%, 0, 0); }
+    .menu-responsive.-full {
+      max-width: 100%;
+      width: 100%;
+      left: 0;
+      opacity: 0; }
     .menu-responsive ul {
       padding: 50px 0 0; }
       .menu-responsive ul .menu-item a {
@@ -806,6 +813,8 @@ a.btn {
       -ms-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       z-index: 99; }
+      .show-menu .menu-responsive.-full {
+        opacity: 1; }
     .show-menu:before {
       z-index: 99;
       opacity: .5;

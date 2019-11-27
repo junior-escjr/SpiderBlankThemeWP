@@ -37,8 +37,6 @@
 	}
 
 	.menu-responsive {
-		max-width: 300px;
-		width: 80%;
 		height: 100%;
 		position: fixed;
 		top: 0;
@@ -48,13 +46,24 @@
 		@include transitions(.3s);
 
 		&.-pos-left {
+			max-width: 300px;
+			width: 80%;
 			left: 0;
 			@include transforms((translate3d),('-100%, 0, 0'));
 		}
 
 		&.-pos-right {
+			max-width: 300px;
+			width: 80%;
 			right: 0;
 			@include transforms((translate3d),('100%, 0, 0'));
+		}
+
+		&.-full {
+			max-width: 100%;;
+			width: 100%;
+			left: 0;
+			opacity: 0;
 		}
 
 		ul {
@@ -71,10 +80,12 @@
 
 	.show-menu {
 		overflow: hidden;
-		
+
 		.menu-responsive {
 			@include transforms((translate3d),('0, 0, 0'));
 			z-index: 99;
+
+			&.-full { opacity: 1; }
 		}
 
 		&:before {
