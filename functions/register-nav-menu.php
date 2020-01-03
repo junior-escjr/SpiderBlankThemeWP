@@ -7,7 +7,7 @@ function spidertheme_nav(){
     array(
         'theme_location'  => 'menu-principal',
         'container'       => 'nav',
-        'container_class' => 'menu-responsive -full',
+        'container_class' => 'menu-responsive -pos-right -full',
         'menu_class'      => 'cf dropdown menu scroll-menu',
         //'walker'          => $walker
         )
