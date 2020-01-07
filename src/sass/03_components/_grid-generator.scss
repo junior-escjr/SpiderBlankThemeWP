@@ -25,6 +25,10 @@ $break-point-default:       0;
     @include container-fixed;
 }
 
+.container-fluid {
+    @include container-fixed;
+}
+
 .row { @include make-row; }
 
 [class^="col-bp"], [class*=" col-bp"],
