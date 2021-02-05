@@ -1,6 +1,6 @@
 // espaçamento da colunas
 $grid-columns:              12 !default;
-$grid-gutter-width:         20px !default;
+$grid-gutter-width:         30px !default;
 $break-point-default:       0;
 
 @mixin container-fixed($gutter: $grid-gutter-width) {
@@ -12,16 +12,53 @@ $break-point-default:       0;
 
 // Creates a wrapper for a series of columns
 @mixin make-row($gutter: $grid-gutter-width) {
-    *zoom: 1;
-    &:before, &:after { content: ""; display: table; }
-    &:after { clear: both; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 
     margin-left:  ceil(($gutter / -2));
     margin-right: floor(($gutter / -2));
 }
+
+@mixin make-grid-column-offset($columns: $grid-columns, $breakpoint: $break-point-default) {
+    @media (min-width: $breakpoint) {
+        margin-left: percentage(($columns / $grid-columns));
+    }
+}
+
+@mixin make-grid-column-push($columns: $grid-columns, $breakpoint: $break-point-default) {
+    @media (min-width: $breakpoint) {
+        left: percentage(($columns / $grid-columns));
+    }
+}
+
+@mixin make-grid-column-pull($columns: $grid-columns, $breakpoint: $break-point-default) {
+    @media (min-width: $breakpoint) {
+        right: percentage(($columns / $grid-columns));
+    }
+}
+
+@mixin make-grid-column($columns: $grid-columns, $breakpoint: $break-point-default, $gutter: $grid-gutter-width) {
+    @media (min-width: $breakpoint) {
+        width: percentage(($columns / $grid-columns));
+        padding-left:  ($gutter / 2);
+        padding-right: ($gutter / 2);
+    }
+}
+
+@mixin make-grid-column2($columns: $grid-columns, $breakpoint: $break-point-default, $gutter: $grid-gutter-width) {
+    @media (min-width: $breakpoint) {
+        width: percentage(($columns / $grid-columns));
+        padding-left:  ($gutter / 2);
+        padding-right: ($gutter / 2);
+        float: left;
+    }
+}
 	
 .container {
-    max-width: 1200px;
+    max-width: 1720px;
     @include container-fixed;
 }
 
@@ -31,14 +68,12 @@ $break-point-default:       0;
 
 .row { @include make-row; }
 
-[class^="col-bp"], [class*=" col-bp"],
 [class^="col-"], [class*=" col-"] {
 	width: 100%;
-	min-height: 1px;
-	padding-right: 10px;
-	padding-left: 10px;
+    min-height: 1px;
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
 	position: relative;
-	float: left;
 }
 
 @for $i from 1 through 12 {
@@ -72,28 +107,28 @@ $break-point-default:       0;
 	@media( min-width: $value ) {
 
 		@for $i from 1 through 12 {
-			.col-#{$key}-#{$i}{
+			.#{$key}#{$breakpoint-separator}col-#{$i}{
 		        width: percentage(($i / $grid-columns));
 		    }
 	    }
 		
 		/* ========== OFFSET ============ */
 	    @for $i from 0 through 12 {
-			.offset-#{$key}-#{$i}{
+			.#{$key}#{$breakpoint-separator}offset-#{$i}{
 		        margin-left: percentage(($i / $grid-columns));
 		    }
 	    }
 		
 		/* ========== PUSH ============ */
 	    @for $i from 0 through 12 {
-			.push-#{$key}-#{$i}{
+			.#{$key}#{$breakpoint-separator}push-#{$i}{
 		        left: percentage(($i / $grid-columns));
 		    }
 	    }
 		
 		/* ========== PULL ============ */
 	    @for $i from 0 through 12 {
-			.pull-#{$key}-#{$i}{
+			.#{$key}#{$breakpoint-separator}pull-#{$i}{
 		        right: percentage(($i / $grid-columns));
 		    }
 	    }
