@@ -34,12 +34,12 @@ $colors: (
 // ------------------------------------------------------------
 
 $font-size : (
-    small-x : $small-x,
-    small : $small,
-    regular : $regular,
-    large: $large,
-    large-x : $large-x,
-    large-xx : $large-xx,
+    14 : $fs14,
+    16 : $fs16,
+    18 : $fs18,
+    24 : $fs24,
+    36 : $fs36,
+    48 : $fs48,
 );
 
 $font-family : (

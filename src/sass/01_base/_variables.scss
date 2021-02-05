@@ -4,22 +4,22 @@ $breakpoint-separator: '\\:';
 $font-primary: 'Montserrat';
 $font-secondary: 'PT Sans';
 
-$small-x: 	14px;
-$small: 	16px;
-$regular: 	18px;
-$large: 	24px;
-$large-x: 	36px;
-$large-xx: 	48px;
+$fs14: 	14px;
+$fs16: 	16px;
+$fs18: 	18px;
+$fs24: 	24px;
+$fs36: 	36px;
+$fs48: 	48px;
 
-$font-size-primary:		$regular;
+$font-size-primary:		$fs16;
 $line-height-primary:	1.2;
 
-$font-size-h1:	$large-xx !default;
-$font-size-h2:	$large-x !default;
-$font-size-h3:	$large !default;
-$font-size-h4:	$regular !default;
-$font-size-h5:	$small !default;
-$font-size-h6:	$small-x !default;
+$font-size-h1:	$fs48 !default;
+$font-size-h2:	$fs36 !default;
+$font-size-h3:	$fs24 !default;
+$font-size-h4:	$fs18 !default;
+$font-size-h5:	$fs16 !default;
+$font-size-h6:	$fs14 !default;
 
 //== Colors
 $primary: 		#848484;
