@@ -1,104 +1,33 @@
-// BUTTONS
-$btn-padding       : 13px 28px;
-$btn-font-family   : ff(primary);
-$btn-font-size     : fs(small-x);
-$btn-font-weight   : fw(bold);
-$btn-text-transform: uppercase;
-$btn-line-height   : lh(normal);
-$btn-vertical-align: top;
-$btn-font-color    : color(blood);
-$btn-bg-color      : color(snow);
-$btn-border        : 2px solid color(blood);
-$btn-border-radius : 10px;
-
-
-/* height 30px */
-.btn{
-    padding: $btn-padding;
+.btn {
     display: inline-block;
-
-    vertical-align: middle;
-
-    text-align      : center;
-    text-decoration : none;
-    text-overflow   : ellipsis;
-    text-transform  : $btn-text-transform;
-    vertical-align  : $btn-vertical-align;
-
-    font-family : $btn-font-family;
-    font-size   : $btn-font-size;
-    font-weight : $btn-font-weight;
-    line-height : $btn-line-height;
-
-    color: $btn-font-color;
-
-    background-color: $btn-bg-color;
-    border: $btn-border;
-    cursor: pointer;
-
-    -webkit-touch-callout: none;
-       -moz-touch-callout: none;
-            touch-callout: none;
-
-    @include border-radius($btn-border-radius);
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 0;
+    padding: 16px;
+    border: 0;    
 
     @include transitions(.1s, ease-in-out);
 
-    &:hover{
+    &:hover {
         transition: all 0.2s ease-in-out;
         opacity: .7;
+        text-decoration: none;
     }
 
     &.align-right { float: right; }
 
-    /* ---------- SIZES ---------- */
-    &.is-mini{ @include make-btn-size(3px 8px, 12px, 1.5); }
-    &.is-big{ @include make-btn-size(15px 16px, 16px, 16px); }
-    &.is-extra{ @include make-btn-size(15px 20px , 20px, 26px); }
-
-    /* ---------- COLORS ---------- */
-    &.is-blood{ 
+    /* ---------- STYLES ---------- */
+    &.is-style1 { 
         font-weight: bold; 
-        @include make-btn-color( color(blood), color(snow), color(blood) );/* bg, color text, border */
+        @include make-btn-color( #272727, $snow, #272727 );/* bg, color text, border */
     }
 
-    &.is-grass{ 
-        font-weight: bold; 
-        @include make-btn-color( color(grass), color(snow), color(grass) );/* bg, color text, border */
-    }
-
-    /* ----------- STYLES ---------- */
-    &.is-ghost{
-
-        &.is-snow{
-            @include make-btn-color( transparent, color(snow), color(snow) )
-        }
-
-        &.is-snow:hover{
-            @include make-btn-color( color(secondary), #fff, color(secondary) )
-        }
-
-         &.is-sun{
-            padding: 9px 0;
-            @include make-btn-color( transparent, color(dark), color(sun) )
-        }
-
-        &.is-sun:hover{
-            opacity: 1;
-            @include make-btn-color( color(sun), color(dark), color(sun) )
-        }
-    }
-
-    &.is-round{
+    &.is-round {
         @include border-radius(25px);
     }
 
-    &.is-block{
+    &.is-block {
         width: 100%;
         display: block;
     }
-}
-
-a.btn{
-    text-decoration: none;
 }
