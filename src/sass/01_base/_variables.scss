@@ -1,0 +1,44 @@
+$breakpoint-separator: '\\:';
+
+//== Typography
+$font-primary: 'Montserrat';
+$font-secondary: 'PT Sans';
+
+$fs14: 	14px;
+$fs16: 	16px;
+$fs18: 	18px;
+$fs24: 	24px;
+$fs36: 	36px;
+$fs48: 	48px;
+
+$font-size-primary:		$fs16;
+$line-height-primary:	1.2;
+
+$font-size-h1:	$fs48 !default;
+$font-size-h2:	$fs36 !default;
+$font-size-h3:	$fs24 !default;
+$font-size-h4:	$fs18 !default;
+$font-size-h5:	$fs16 !default;
+$font-size-h6:	$fs14 !default;
+
+//== Colors
+$primary: 		#848484;
+$secondary: 	#1a2140;
+$snow: 			#fff;
+$dark: 			#000;
+$sun: 			#ffed2d;
+$grass: 		#007d32;
+$blood: 		#e41b13;
+$grey-100:   	#f7f7f7;
+$grey-150:  	#b9b9b9;
+$grey-200: 		#9f9f9f;
+$grey-250:  	#696969;
+$grey-300: 	    #464646;
+
+
+//== Config Global
+$body-bg:               $snow !default;
+$text-color:            $primary !default;
+$link-color:            $primary !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;

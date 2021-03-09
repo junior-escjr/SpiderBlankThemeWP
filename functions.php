@@ -24,3 +24,15 @@ include(TEMPLATEPATH . '/functions/remove-junk-header.php');
 
 // FUNÇÃO DA PÁGINAÇÃO
 include(TEMPLATEPATH . '/functions/pagination.php');
+
+// FUNÇÃO DA PÁGINAÇÃO
+include(TEMPLATEPATH . '/functions/functions-ajax.php');
+
+// MENU DESCRIPTION
+include(TEMPLATEPATH . '/functions/add-theme-suport.php');
+
+// CLASS ODIN
+include(TEMPLATEPATH . '/classes/odin-thumbnail-resizer.php');
+
+// FUNCTION ODIN
+include(TEMPLATEPATH . '/functions/custom-post-thumbnail.php');

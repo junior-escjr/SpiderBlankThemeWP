@@ -1,8 +1,11 @@
 // AQUI MONITORA OS ARQUIVOS VERIFICANDO SE EXISTE ALTERAÇÕES
 
 var gulp = require('gulp');
+var config  = require("../config.js");
 
-gulp.task('default', function(){
-	gulp.watch('../src/sass/**/*.scss', ['concat-sass']) // MONITORA A PASTA SASS DO CSS
-	gulp.watch('../src/js/**/*.js', ['concat-js']) // MONITORA A PASTA SASS DO CSS
-});
+gulp.task('default', gulp.series('concat-sass', 'concat-js', function(done) {
+	gulp.watch(config.path.srcCss + '**/*.scss', gulp.parallel('concat-sass', 'min-css'))
+	gulp.watch(config.path.srcJs + '**/*.js', gulp.parallel('concat-js', 'min-js'))
+
+	done();
+}));

@@ -1,0 +1,25 @@
+/* --------------------------------------------------------------- */
+/* PADDING */
+/* --------------------------------------------------------------- */
+
+@each $scaleKey, $scaleValue in $padding {
+    .pd-#{$scaleKey}{ padding: $scaleValue; }
+    .pd-t-#{$scaleKey}{ padding-top: $scaleValue; }
+    .pd-l-#{$scaleKey}{ padding-left: $scaleValue; }
+    .pd-b-#{$scaleKey}{ padding-bottom: $scaleValue; }
+    .pd-r-#{$scaleKey}{ padding-right: $scaleValue; }
+}
+
+@each $bkKey, $bkValue in $grid-breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $padding {
+                @include ddScale( 'pd', $bkKey, $scaleKey){ padding: $scaleValue; }
+                @include ddScale( 'pd-t', $bkKey, $scaleKey){ padding-top: $scaleValue; }
+                @include ddScale( 'pd-l', $bkKey, $scaleKey){ padding-left: $scaleValue; }
+                @include ddScale( 'pd-b', $bkKey, $scaleKey){ padding-bottom: $scaleValue; }
+                @include ddScale( 'pd-r', $bkKey, $scaleKey){ padding-right: $scaleValue; }
+            }
+        }
+    }
+}

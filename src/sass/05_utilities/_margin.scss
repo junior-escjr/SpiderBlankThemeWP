@@ -1,0 +1,27 @@
+/* --------------------------------------------------------------- */
+/* MARGIN */
+/* --------------------------------------------------------------- */
+
+@each $scaleKey, $scaleValue in $margin {
+    .mrg-#{$scaleKey}{ margin: $scaleValue; }
+    .mrg-t-#{$scaleKey}{ margin-top: $scaleValue; }
+    .mrg-l-#{$scaleKey}{ margin-left: $scaleValue; }
+    .mrg-b-#{$scaleKey}{ margin-bottom: $scaleValue; }
+    .mrg-r-#{$scaleKey}{ margin-right: $scaleValue; }
+}
+
+
+
+@each $bkKey, $bkValue in $grid-breakpoints {
+    @if($bkValue != 0){
+        @media (min-width: $bkValue) {
+            @each $scaleKey, $scaleValue in $margin {
+                @include ddScale( 'mrg', $bkKey, $scaleKey){ margin: $scaleValue; }
+                @include ddScale( 'mrg-t', $bkKey, $scaleKey){ margin-top: $scaleValue; }
+                @include ddScale( 'mrg-l', $bkKey, $scaleKey){ margin-left: $scaleValue; }
+                @include ddScale( 'mrg-b', $bkKey, $scaleKey){ margin-bottom: $scaleValue; }
+                @include ddScale( 'mrg-r', $bkKey, $scaleKey){ margin-right: $scaleValue; }
+            }
+        }
+    }
+}

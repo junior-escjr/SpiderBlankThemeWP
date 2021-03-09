@@ -1,0 +1,33 @@
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 0;
+    padding: 16px;
+    border: 0;    
+
+    @include transitions(.1s, ease-in-out);
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        opacity: .7;
+        text-decoration: none;
+    }
+
+    &.align-right { float: right; }
+
+    /* ---------- STYLES ---------- */
+    &.is-style1 { 
+        font-weight: bold; 
+        @include make-btn-color( #272727, $snow, #272727 );/* bg, color text, border */
+    }
+
+    &.is-round {
+        @include border-radius(25px);
+    }
+
+    &.is-block {
+        width: 100%;
+        display: block;
+    }
+}

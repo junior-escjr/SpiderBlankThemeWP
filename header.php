@@ -22,13 +22,21 @@
 			<header class="header">
 				<div class="container">
 					<div class="row">
-						<div class="header-logo">
-							<a href="<?php bloginfo('url');?>">
+						<div class="col-6">
+							<a class="header-logo" href="<?php bloginfo('url');?>">
 								<img src="<?php bloginfo('template_url');?>/static/images/logo-spidertheme-red-extend.png" alt="">
 							</a>
 						</div>
+						
+						<div class="col-6">
+							<?php spidertheme_nav(); ?>
 
-						<?php spidertheme_nav(); ?>
+							<div class="hamburguer">
+								<div class="hamburguer__item"></div>
+								<div class="hamburguer__item"></div>
+								<div class="hamburguer__item"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				

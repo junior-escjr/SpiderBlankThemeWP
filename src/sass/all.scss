@@ -1,17 +1,23 @@
+// BASE
+@import "01_base/variables";
+@import "01_base/scales";
+@import "01_base/helpers/mixins";
+@import "01_base/fonts";
+@import "01_base/reset";
+@import "01_base/typography";
 
-// Core variables and mixins
-@import "helpers/variables";
-@import "helpers/mixins";
+// ELEMENTS
+@import "02_elements/buttons";
 
-// Reset and dependencies
-@import "base/reset";
-@import "base/fonts";
+// COMPONENTS
+@import "03_components/grid-generator";
+@import "03_components/menu-mobile";
 
-// libs
+// LAYOUT
+@import "04_layout/general";
+@import "04_layout/header";
+@import "04_layout/frontpage";
+@import "04_layout/footer";
 
-// Layout
-@import "layout/grid";
-@import "layout/general";
-@import "layout/header";
-@import "layout/home";
-@import "layout/footer";
+// HELPERS
+@import "05_utilities/utilities";

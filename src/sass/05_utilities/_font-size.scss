@@ -1,0 +1,25 @@
+/* --------------------------------------------------------------- */
+/* FONT-SIZE */
+/* --------------------------------------------------------------- */
+
+
+// GERA AS CLASSES
+@each $key, $value in $font-size {
+    .fs-#{$key}{
+        font-size: $value;
+    }
+}
+
+$prefix-class: fs-;
+$scale: $font-size;
+
+@each $keyBp, $valueBp in $grid-breakpoints {
+    @media (min-width: $valueBp) {
+        @each $keyScale, $valueScale in $scale {
+            $classe: $prefix-class + $keyScale;
+            .#{$keyBp}#{$breakpoint-separator}#{$classe} {
+                font-size: $valueScale;
+            }
+        }
+    }
+}
