@@ -3,18 +3,10 @@
 // ------------------------------------------------------------
 
 $grid-breakpoints: (
-<<<<<<< HEAD
     bp576: 576px,
     bp768: 768px,
     bp992: 992px,
     bp1200: 1200px
-=======
-    bp540: 540px,
-    bp720: 720px,
-    bp960: 960px,
-    bp1140: 1140px,
-    bp1320: 1320px,
->>>>>>> 79badd90616b245551b8670bc860d9f2116587a6
 );
 
 // ------------------------------------------------------------
@@ -22,7 +14,6 @@ $grid-breakpoints: (
 // ------------------------------------------------------------
 
 $colors: (
-<<<<<<< HEAD
     primary     : $primary,
     secondary   : $secondary,
     snow        : $snow,
@@ -35,20 +26,6 @@ $colors: (
     grey-200    : $grey-200,
     grey-250    : $grey-250,
     grey-300    : $grey-300
-=======
-    primary : $primary,
-    secondary : $secondary,
-    snow : $snow,
-    dark : $dark,
-    sun : $sun,
-    grass : $grass,
-    blood : $blood,
-    grey-lighter : $grey-lighter,
-    grey-light : $grey-light,
-    grey : $grey,
-    grey-dark : $grey-dark,
-    grey-darker : $grey-darker
->>>>>>> 79badd90616b245551b8670bc860d9f2116587a6
 );
 
 // ------------------------------------------------------------
@@ -85,28 +62,8 @@ $font-weight : (
 
 $margin: (
     0: 0,
-<<<<<<< HEAD
-=======
-    1: 1px,
-    5: 5px,
-    10: 10px,
-    15: 15px,
-    20: 20px,
-    30: 30px,
-    64: 64px,
->>>>>>> 79badd90616b245551b8670bc860d9f2116587a6
 );
 
 $padding: (
     0: 0,
-<<<<<<< HEAD
-=======
-    1: 1px,
-    5: 5px,
-    10: 10px,
-    15: 15px,
-    20: 20px,
-    30: 30px,
-    64: 64px,
->>>>>>> 79badd90616b245551b8670bc860d9f2116587a6
 );
