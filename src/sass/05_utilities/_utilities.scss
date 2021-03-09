@@ -94,6 +94,7 @@
 .aligncenter, img.aligncenter { margin: 15px auto 10px auto; }
 .alignnone, img.alignnone { margin: 20px auto; }
 
+<<<<<<< HEAD
 $ff-config: (
     prefix: ('ff-'),
     properties: ('font-family'), 
@@ -169,3 +170,12 @@ $bg-config: (
     // responsive-variants: ('focus'),
 );
 @include gen($bg-config);
+=======
+@import "05_utilities/font-family";
+@import "05_utilities/font-size";
+@import "05_utilities/font-weight";
+@import "05_utilities/font-colors";
+@import "05_utilities/padding";
+@import "05_utilities/margin";
+@import "05_utilities/backgrounds";
+>>>>>>> 79badd90616b245551b8670bc860d9f2116587a6
