@@ -3,7 +3,7 @@ var config  = require("../config.js");
 
 var gulp = require('gulp');
 var concat = require('gulp-concat'); // junta todos os arquivos
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 
 gulp.task('concat-sass', function (done) {
   gulp.src(config.path.srcCss + '**/*.scss')
